@@ -1,0 +1,83 @@
+---
+layout: onepage
+---
+
+<div class="section-hero" style="background-image:url({{ '/assets/img/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg' | relative_url }})">
+  <div class="section-overlay"></div>
+  <div class="section-content" data-aos="zoom-in-down">
+    <img src="{{ '/assets/img/name-logo-path.svg' | relative_url }}" alt="">
+    <p>❤️ 15.08.2026 ❤️</p>
+  </div>
+</div>
+
+<div class="section-hero" style="background-image:url({{ '/assets/img/alvin-mahmudov-9_XfcBxf_uo-unsplash.jpg' | relative_url }})">
+  <div class="section-overlay"></div>
+  <div class="section-content" data-aos="flip-left">
+    <p>{{ page.intro }}<span> 😊</span></p>
+  </div>
+</div>
+
+<div class="section-hero" style="background-image:url({{ '/assets/img/photos-by-lanty-O38Id_cyV4M-unsplash.jpg' | relative_url }})">
+  <div class="section-overlay"></div>
+  <div class="section-content" data-aos="flip-left">
+    <h2>{{ page.schedule }}</h2>
+    <ul style="list-style: none; text-align: left; padding-left: 0px;">
+      <li><span>✅ </span>18:30 | {{ page.arrival }}</li>
+      <li><span>🎉 </span>19:00 | {{ page.ceremony }}</li>
+      <li><span>😋 </span>19:30 | {{ page.banquet }}</li>
+      <li><span>💃 </span>20:00 | {{ page.program }}</li>
+      <li><span>💤 </span>23:00 | {{ page.end }}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-hero" style="background-image:url({{ '/assets/img/abby-savage-zNsSwsuyP3A-unsplash.jpg' | relative_url }})">
+  <div class="section-overlay"></div>
+  <div class="section-content">
+    <h2>{{ page.location }}</h2>
+    <iframe  data-aos="fade-right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.266973029091!2d65.3444404!3d40.119915999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f51c70062510343%3A0x19ba7e5e66f6a3d7!2sLa%20Limonariya!5e0!3m2!1sen!2sde!4v1783092679212!5m2!1sen!2sde" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <iframe  data-aos="fade-left" src="https://yandex.com/map-widget/v1/?from=mapframe&ll=65.375668%2C40.099641&mode=search&oid=18580717100&ol=biz&source=mapframe&utm_source=mapframe&z=13.66" width="300" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+  </div>
+</div>
+
+<div class="section-hero" style="background-image:url({{ '/assets/img/jeremy-wong-weddings-464ps_nOflw-unsplash.jpg' | relative_url }})">
+  <div class="section-overlay"></div>
+  <div class="section-content"  data-aos="zoom-in-up">
+    <h2>{{ page.form }}</h2>
+    <form id="contact-form">
+      <input type="text" name="entry.2120138937" placeholder="{{ page.form_name }}" required>
+      <input type="text" name="entry.1390988178" placeholder="{{ page.relationship }}" required>
+      <textarea name="entry.1932260310" placeholder="{{ page.message }}" rows="6" required></textarea>
+      <input type="text" id="invitation-code" placeholder="{{ page.code }}" required>
+      <button type="submit">{{ page.submit }}</button>
+    </form>
+</div>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const enteredCode = document.getElementById('invitation-code').value.trim();
+  const validCode = '123';
+
+  if (enteredCode !== validCode) {
+    alert('{{ page.invalid }}');
+    return;
+  }
+
+  const formData = new FormData(this);
+
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSdSthuDQwwG8gzZx3I6GPAR7Tf7ozkqgnRXydx2xoNyib-TxQ/formResponse', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData
+  })
+  .then(() => {
+    document.getElementById('contact-form').reset();
+    document.getElementById('success-message').style.display = 'block';
+  })
+  .catch(() => {
+    alert('{{ page.valid }} ❤');
+  });
+});
+</script>

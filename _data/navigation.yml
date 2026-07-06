@@ -1,0 +1,13 @@
+main:
+  - title: "O‘Z"
+    url: /uz/
+  - title: "ЎЗ"
+    url: /uz-cyrl/
+  - title: "繁"
+    url: /zh/
+  - title: "РУ"
+    url: /ru/
+  - title: "DE"
+    url: /de/
+  - title: "EN"
+    url: /en/

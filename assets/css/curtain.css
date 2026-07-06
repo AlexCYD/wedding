@@ -1,0 +1,281 @@
+:root{
+
+        --duration:1800ms;
+
+        --curtain:#8b0000;
+        --curtain-dark:#550000;
+        --curtain-light:#b40000;
+
+        --background:#0b0b0b;
+
+    }
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    html,body{
+
+        width:100%;
+        height:100%;
+
+        overflow:hidden;
+
+        background:var(--background);
+
+        font-family:
+        "Segoe UI",
+        sans-serif;
+
+    }
+
+    /****************************/
+
+    main{
+
+        position:fixed;
+        inset:0;
+
+        display:flex;
+
+        justify-content:center;
+        align-items:center;
+
+        flex-direction:column;
+
+        color:white;
+
+        opacity:0;
+
+        transform:
+        scale(.95);
+
+        transition:
+
+        opacity 1s ease,
+
+        transform 1s ease;
+
+    }
+
+    main.show{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    h1{
+
+        font-size:
+        clamp(38px,7vw,90px);
+
+        letter-spacing:5px;
+
+        margin-bottom:20px;
+
+    }
+
+    p{
+
+        font-size:
+        clamp(18px,2vw,28px);
+
+        opacity:.75;
+
+    }
+
+    /****************************/
+
+    #curtain{
+
+        position:fixed;
+
+        inset:0;
+
+        z-index:999;
+
+        overflow:hidden;
+
+        pointer-events:none;
+
+    }
+
+    /****************************/
+
+    .panel{
+
+        position:absolute;
+
+        top:0;
+
+        width:50%;
+
+        height:100%;
+
+        overflow:hidden;
+
+    }
+
+    /****************************/
+
+    .left{
+
+        left:0;
+
+    }
+
+    .right{
+
+        right:0;
+
+    }
+
+    /****************************/
+
+    .fabric{
+
+        position:absolute;
+
+        inset:0;
+
+        background:
+
+        repeating-linear-gradient(
+
+            90deg,
+
+            var(--curtain-dark) 0px,
+
+            var(--curtain) 18px,
+
+            var(--curtain-light) 36px,
+
+            var(--curtain) 54px
+
+        );
+
+    }
+
+    /* 布料皺褶 */
+
+    .fabric::before{
+
+        content:"";
+
+        position:absolute;
+
+        inset:0;
+
+        background:
+
+        repeating-radial-gradient(
+
+            ellipse at top,
+
+            rgba(255,255,255,.12),
+
+            rgba(255,255,255,0) 22px,
+
+            rgba(0,0,0,.22) 45px
+
+        );
+
+        mix-blend-mode:overlay;
+
+        opacity:.55;
+
+    }
+
+    /* 陰影 */
+
+    .fabric::after{
+
+        content:"";
+
+        position:absolute;
+
+        inset:0;
+
+        background:
+
+        linear-gradient(
+
+            to right,
+
+            rgba(0,0,0,.5),
+
+            transparent 25%,
+
+            transparent 75%,
+
+            rgba(0,0,0,.5)
+
+        );
+
+    }
+
+    /****************************/
+
+    .light{
+
+        position:absolute;
+
+        left:50%;
+
+        top:0;
+
+        transform:translateX(-50%);
+
+        width:0;
+
+        height:100%;
+
+        opacity:0;
+
+        background:
+
+        radial-gradient(
+
+            ellipse at center,
+
+            rgba(255,250,220,.95),
+
+            rgba(255,255,255,.45),
+
+            rgba(255,255,255,0)
+
+        );
+
+        filter:blur(10px);
+
+    }
+
+    /****************************/
+
+    @media (max-width:768px){
+
+    .fabric{
+
+    background:
+
+    repeating-linear-gradient(
+
+    90deg,
+
+    #5f0000 0,
+
+    #8d0000 14px,
+
+    #b40000 28px,
+
+    #8d0000 42px
+
+    );
+
+    }
+
+    }
