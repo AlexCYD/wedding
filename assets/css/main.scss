@@ -3,6 +3,9 @@
 search: false
 ---
 
+$sans-serif: "LXGW WenKai TC", sans-serif;
+$serif: "LXGW WenKai TC", sans-serif;
+
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
