@@ -44,39 +44,40 @@ layout: onepage
   <div class="section-content"  data-aos="zoom-in-up">
     <h2>{{ page.form }}</h2>
     <form id="contact-form">
-      <input type="text" name="entry.2120138937" placeholder="{{ page.form_name }}" required>
-      <input type="text" name="entry.1390988178" placeholder="{{ page.relationship }}" required>
-      <textarea name="entry.1932260310" placeholder="{{ page.message }}" rows="6" required></textarea>
-      <input type="text" id="invitation-code" placeholder="{{ page.code }}" required>
+      <input type="text" name="name" placeholder="{{ page.form_name }}" required>
+      <input type="text" name="relationship" placeholder="{{ page.relationship }}" required>
+      <textarea name="message" placeholder="{{ page.message }}" rows="6" required></textarea>
+      <input type="text" name="code" placeholder="{{ page.code }}" required>
       <button type="submit">{{ page.submit }}</button>
     </form>
 </div>
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', function(e) {
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxE8YMzmoKDqzX9wLBYeDYPyzegC4rIM8dvpI7kDkOTUlToBzRWcbNt7iDnDRB10oWx/exec"
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const enteredCode = document.getElementById('invitation-code').value.trim();
-  const validCode = '123';
+  const formData = new FormData(form);
 
-  if (enteredCode !== validCode) {
-    alert('{{ page.invalid }}');
-    return;
+  try {
+    const res = await fetch(WEB_APP_URL, {
+      method: "POST",
+      body: formData
+    });
+
+    const text = await res.text();
+
+    if (text === "OK") {
+      alert('{{ page.valid }} ❤');
+      form.reset();
+    } else {
+      alert('{{ page.invalid }}');
+    }
+
+  } catch (err) {
+    alert("Try again later.");
   }
-
-  const formData = new FormData(this);
-
-  fetch('https://docs.google.com/forms/d/e/1FAIpQLSdSthuDQwwG8gzZx3I6GPAR7Tf7ozkqgnRXydx2xoNyib-TxQ/formResponse', {
-    method: 'POST',
-    mode: 'no-cors',
-    body: formData
-  })
-  .then(() => {
-    document.getElementById('contact-form').reset();
-    document.getElementById('success-message').style.display = 'block';
-  })
-  .catch(() => {
-    alert('{{ page.valid }} ❤');
-  });
 });
 </script>
