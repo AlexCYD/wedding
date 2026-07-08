@@ -3,6 +3,8 @@ layout: invitation
 locale: zh
 title: 邀請函
 
+mylogo: '/assets/img/name-logo-zh-path.svg'
+
 intro: 親愛的家人和朋友們，我們非常高興邀請你們參加我們的婚禮
 
 schedule: 時間表

@@ -3,6 +3,8 @@ layout: invitation
 locale: ru
 title: Приглашение
 
+mylogo: '/assets/img/name-logo-path.svg'
+
 intro: Дорогие родные и друзья, мы рады пригласить вас на нашу свадьбу
 
 schedule: Расписание

@@ -3,6 +3,8 @@ layout: invitation
 locale: uz
 title: Taklifnoma
 
+mylogo: '/assets/img/name-logo-path.svg'
+
 intro: Aziz oila a'zolarimiz va do'stlarimiz, sizni to'yimizga taklif qilishdan mamnunmiz
 
 schedule: Jadval

@@ -3,6 +3,8 @@ layout: invitation
 locale: uz-cyrl
 title: Таклифнома
 
+mylogo: '/assets/img/name-logo-path.svg'
+
 intro: Азиз оила аъзоларимиз ва дўстларимиз, сизни тўйимизга таклиф қилишдан мамнунмиз
 
 schedule: Жадвал

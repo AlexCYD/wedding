@@ -3,6 +3,8 @@ layout: invitation
 locale: en
 title: Invitation
 
+mylogo: '/assets/img/name-logo-path.svg'
+
 intro: Dear family and friends, we are pleased to invite you to our wedding
 
 schedule: Schedule

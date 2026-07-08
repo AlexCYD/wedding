@@ -3,6 +3,8 @@ layout: invitation
 locale: de
 title: Einladung
 
+mylogo: '/assets/img/name-logo-path.svg'
+
 intro: Liebe Familie und Freund:innen, wir freuen uns, Euch zu unserer Hochzeit einzuladen
 
 schedule: Zeitplan
