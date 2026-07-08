@@ -5,7 +5,7 @@ title: Taklifnoma
 
 mylogo: '/assets/img/name-logo-path.svg'
 
-intro: Aziz oila a'zolarimiz va do'stlarimiz, sizni to'yimizga taklif qilishdan mamnunmiz
+intro: '"Va sizlarga sokinlik topishingiz uchun oʼzingizdan juftlar yaratganligi va oralaringizda sevgi va marhamatni solib qoʼygani (ham) Uning oyat-belgilaridandir. Albatta, bunda tafakkur qiladigan qavmlar uchun oyat-belgilar bordir." <br> Qurʼon 30:21'
 
 schedule: Jadval
 arrival: Mehmon kelishi

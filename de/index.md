@@ -5,7 +5,7 @@ title: Einladung
 
 mylogo: '/assets/img/name-logo-path.svg'
 
-intro: Liebe Familie und Freund:innen, wir freuen uns, Euch zu unserer Hochzeit einzuladen
+intro: „Und es gehört zu Seinen Zeichen, daß Er euch aus euch selbst Gattinnen erschaffen hat, damit ihr bei ihnen Ruhe findet; und Er hat Zuneigung und Barmherzigkeit zwischen euch gesetzt. Darin sind wahrlich Zeichen für Leute, die nachdenken.“ <br> Koran 30:21
 
 schedule: Zeitplan
 arrival: Ankunft der Gäste
