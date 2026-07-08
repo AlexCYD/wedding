@@ -65,8 +65,27 @@ window.addEventListener("load",()=>{
 
   setTimeout(()=>{
 
-  window.location.replace("{{ '/en/' | relative_url }}");
+const savedLang = localStorage.getItem('lang');
+const lang = navigator.language || navigator.userLanguage;
 
+// If user already chose a language, respect it first
+if (savedLang) {
+  window.location.replace("{{ '/' | relative_url }}" + savedLang + "/");
+} else {
+  if (lang.startsWith('uz-cyrl')) {
+    wwindow.location.replace("{{ '/uz-cyrl/' | relative_url }}");
+  } else if (lang.startsWith('uz')) {
+    window.location.replace("{{ '/uz/' | relative_url }}");
+  } else if (lang.startsWith('de')) {
+    window.location.replace("{{ '/de/' | relative_url }}");
+  } else if (lang.startsWith('zh')) {
+    window.location.replace("{{ '/zh/' | relative_url }}");
+  } else if (lang.startsWith('ru')) {
+    window.location.replace("{{ '/ru/' | relative_url }}");
+  } else {
+    window.location.replace("{{ '/en/' | relative_url }}");
+  }
+}
   },3000);
 
   });
