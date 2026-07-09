@@ -8,11 +8,11 @@ mylogo: '/assets/img/name-logo-path.svg'
 intro: '"And one of His signs is that He created for you spouses from among yourselves so that you may find comfort in them. And He has placed between you compassion and mercy. Surely in this are signs for people who reflect." <br> Quran 30:21 <br><br> Dear family and friends, we are pleased to invite you to our wedding'
 
 schedule: Schedule
-arrival: Guest arrival
+arrival: Arrival
 ceremony: Ceremony
 banquet: Banquet
 program: Program
-end: End of the evening
+end: Farewell
 
 location: Location
 
