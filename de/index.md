@@ -11,7 +11,7 @@ schedule: Zeitplan
 arrival: Ankunft
 ceremony: Zeremonie
 banquet: Bankett
-program: Abendprogramm
+program: Programm
 end: Ausklang
 
 location: Standort
