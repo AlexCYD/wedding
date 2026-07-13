@@ -3,7 +3,7 @@ layout: invitation
 locale: uz
 title: Taklifnoma
 
-mylogo: '/assets/img/name-logo-path.svg'
+mylogo: '/assets/img/name-logo-ym-path.svg'
 
 intro: '"Va sizlarga sokinlik topishingiz uchun oʼzingizdan juftlar yaratganligi va oralaringizda sevgi va marhamatni solib qoʼygani (ham) Uning oyat-belgilaridandir. Albatta, bunda tafakkur qiladigan qavmlar uchun oyat-belgilar bordir." <br> Qurʼon 30:21 <br><br> Aziz oila aʼzolarimiz va doʼstlarimiz, sizni toʼyimizga taklif qilishdan mamnunmiz'
 
